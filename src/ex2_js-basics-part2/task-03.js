@@ -1,19 +1,20 @@
 const getNumbersOfEvenAndOddArrayItems = (array) => {
-  const resultArray = [];
-  const filteredArray = array.filter((item) => typeof item === 'number');
-  const evenItemsNumber = filteredArray.filter((item) => (item % 2 === 0) && (item !== 0)).length;
-  const oddItemsNumber = filteredArray.filter((item) => item % 2 !== 0).length;
-  let zeroesNumber;
+  const filteredArrayWithOnlyNums = array.filter((item) => typeof item === 'number');
+  let evenItemsNumber = 0;
+  let oddItemsNumber = 0;
+  let zeroesNumber = 0;
 
-  if (array.some((item) => item === 0)) {
-    zeroesNumber = array.filter((item) => item === 0).length;
-  } else {
-    zeroesNumber = 0;
-  }
+  filteredArrayWithOnlyNums.forEach((item) => {
+    if (item === 0) {
+      zeroesNumber += 1;
+    } else if (item % 2 === 0) {
+      evenItemsNumber += 1;
+    } else {
+      oddItemsNumber += 1;
+    }
+  });
 
-  resultArray.push(evenItemsNumber, oddItemsNumber, zeroesNumber);
-
-  return resultArray;
+  return [evenItemsNumber, oddItemsNumber, zeroesNumber];
 };
 
 module.exports = getNumbersOfEvenAndOddArrayItems;

@@ -3,6 +3,7 @@ const getMaxArrayItem = (array) => {
 
   for (let i = 0; i < array.length; i += 1) {
     const iterableItem = array[i];
+
     if (iterableItem > maxItem) maxItem = iterableItem;
   }
 
