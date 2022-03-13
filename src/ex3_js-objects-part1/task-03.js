@@ -1,3 +1,3 @@
-const checkPropertyInObject = (string, object) => object.hasOwnProperty(string) ?? false;
+const checkPropertyInObject = (string, object) => object.hasOwnProperty(string);
 
 module.exports = checkPropertyInObject;
