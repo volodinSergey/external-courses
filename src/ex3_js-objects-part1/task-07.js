@@ -6,6 +6,7 @@ const useArrayOrObject = (object) => {
 
 const deepObjectCopy = (objectOrPrimitiveType) => {
   let newobject;
+  
   if (typeof (objectOrPrimitiveType) === 'object' && objectOrPrimitiveType !== null) {
     newobject = useArrayOrObject(objectOrPrimitiveType);
 
