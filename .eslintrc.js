@@ -73,6 +73,7 @@ module.exports = {
     'vars-on-top': 0,
     'wrap-iife': [2, 'outside'],
     yoda: 2,
+    'linebreak-style': 0,
   },
   settings: {
     'import/resolver': {
