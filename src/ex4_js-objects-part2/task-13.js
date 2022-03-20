@@ -1,3 +1,3 @@
-const randomNumber = () => Math.random() * 100;
+const randomNumberFrom0To100 = () => Math.floor(Math.random() * 100);
 
-module.exports = randomNumber;
+module.exports = randomNumberFrom0To100;

@@ -1,9 +1,14 @@
 const addWord = (mainString, addedString, index) => {
   const wordsArray = mainString.split(' ');
+  let newString = '';
 
-  wordsArray.splice(index + 1, 0, addedString);
+  for (let i = 0; i < wordsArray.length; i += 1) {
+    if (i - 1 === index) newString += `${addedString} `;
 
-  return wordsArray.join(' ');
+    newString += `${wordsArray[i]} `;
+  }
+
+  return newString.trim();
 };
 
 module.exports = addWord;

@@ -1,23 +1,16 @@
-const stringsSymbolsCounter = (str) => {
-  const wordsArray = str.split('');
+const stringsSymbolsCounter = (string) => {
   const resultObject = {};
+  const lowerCaseString = string.toLowerCase();
 
-  wordsArray.forEach((word) => {
-    let n = 0;
-    const corectItem = word;
+  for (let i = 0; i < lowerCaseString.length; i += 1) {
+    const symbol = lowerCaseString[i];
 
-    wordsArray.forEach(() => {
-      if (corectItem === word) {
-        n += 1;
+    if (!resultObject[symbol]) resultObject[symbol] = 0;
 
-        resultObject[word] = n;
-      }
-    });
-  });
+    resultObject[symbol] += 1;
+  }
 
-  Object.keys(resultObject).forEach((key) => {
-    console.log(`${resultObject[key]} : ${resultObject.value}`);
-  });
+  Object.entries(resultObject).forEach(([key, value]) => console.log(`${key} : ${value}`));
 };
 
 module.exports = stringsSymbolsCounter;

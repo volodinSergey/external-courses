@@ -1,8 +1,7 @@
-/* eslint-disable no-restricted-syntax */
 const getPropertyFromProto = (property, object) => {
-  for (const item in object.__proto__) {
-    if (item === property) return object[item];
-  }
+  const prototype = Object.getPrototypeOf(object);
+
+  if (prototype.hasOwnProperty(property)) return prototype[property];
 
   return undefined;
 };

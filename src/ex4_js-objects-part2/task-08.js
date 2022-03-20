@@ -1,19 +1,15 @@
-const toLowerCaseEachWord = (string) => {
-  let newString = '';
+const toLowerCamelCaseEachWord = (string) => {
   const wordsArray = string.split(' ');
 
-  wordsArray.forEach((word, index) => {
-    wordsArray[index] = word.toLowerCase();
-  });
+  for (let i = 0; i < wordsArray.length; i += 1) {
+    if (i === 0) {
+      wordsArray[i] = wordsArray[i].toLowerCase();
+    } else {
+      wordsArray[i] = wordsArray[i].charAt(0).toUpperCase() + wordsArray[i].slice(1).toLowerCase();
+    }
+  }
 
-  wordsArray.forEach((word, index) => {
-    wordsArray[index] = word[0].toUpperCase() + word.slice(1);
-    newString += wordsArray[index];
-  });
-
-  newString = newString[0].toLowerCase() + newString.substring(1);
-
-  return newString;
+  return wordsArray.join('');
 };
 
-module.exports = toLowerCaseEachWord;
+module.exports = toLowerCamelCaseEachWord;
