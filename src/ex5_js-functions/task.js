@@ -1,56 +1,36 @@
-const getArgumentsSum = require('./getArgumentsSum');
-const addZeroToResult = require('./addZeroToResult');
-
 const Calculator = () => {
   let result = 0;
 
-  const getResult = () => result;
-
-  const reset = () => {
-    result = 0;
-
-    return result;
-  };
-
-  const add = (...args) => {
-    if (args.length) result += getArgumentsSum(args);
-
-    addZeroToResult(result);
-
-    return add;
-  };
-
-  const subtract = (...args) => {
-    if (args.length) result -= getArgumentsSum(args);
-
-    addZeroToResult(result);
-
-    return subtract;
-  };
-
-  const divide = (...args) => {
-    if (args.length) result /= getArgumentsSum(args);
-
-    addZeroToResult(result);
-
-    return divide;
-  };
-
-  const multiply = (...args) => {
-    if (args.length) result *= getArgumentsSum(args);
-
-    addZeroToResult(result);
-
-    return multiply;
-  };
-
   return {
-    getResult,
-    reset,
-    add,
-    subtract,
-    divide,
-    multiply,
+    getResult: () => result,
+
+    reset: () => {
+      result = 0;
+    },
+
+    add: function addNum(num = 0) {
+      if (num) result += num;
+
+      return addNum;
+    },
+
+    subtract: function substractNum(num = 0) {
+      if (num) result -= num;
+
+      return substractNum;
+    },
+
+    divide: function divideNum(num = 0) {
+      if (num) result /= num;
+
+      return divideNum;
+    },
+
+    multiply: function multiplyNum(num = 0) {
+      if (num) result *= num;
+
+      return multiplyNum;
+    },
   };
 };
 
