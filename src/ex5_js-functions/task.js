@@ -8,28 +8,28 @@ const Calculator = () => {
       result = 0;
     },
 
-    add: function addNum(num = 0) {
+    add: function addNumber(num = 0) {
       if (num) result += num;
 
-      return addNum;
+      return addNumber;
     },
 
-    subtract: function substractNum(num = 0) {
+    subtract: function substractNumber(num = 0) {
       if (num) result -= num;
 
-      return substractNum;
+      return substractNumber;
     },
 
-    divide: function divideNum(num = 0) {
+    divide: function divideNumber(num = 0) {
       if (num) result /= num;
 
-      return divideNum;
+      return divideNumber;
     },
 
-    multiply: function multiplyNum(num = 0) {
+    multiply: function multiplyNumber(num = 0) {
       if (num) result *= num;
 
-      return multiplyNum;
+      return multiplyNumber;
     },
   };
 };
