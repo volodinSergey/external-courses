@@ -20,13 +20,13 @@ const Calculator = () => {
       return substractNumber;
     },
 
-    divide: function divideNumber(num = 0) {
+    divide: function divideNumber(num) {
       if (num) result /= num;
 
       return divideNumber;
     },
 
-    multiply: function multiplyNumber(num = 0) {
+    multiply: function multiplyNumber(num) {
       if (num) result *= num;
 
       return multiplyNumber;
