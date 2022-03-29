@@ -1,14 +1,26 @@
 const mySlice = (array, begin, end) => {
   const resultArray = [];
-  let start = begin || 0;
-  let finish = end || array.length;
+  let startPosition = begin;
+  let finishPosition = end;
 
-  if (begin < 0) start = array.length + begin;
+  if ((isNaN(end) || end === undefined) && (isNaN(begin) || begin === undefined)) return array;
 
-  if (end < 0) finish = array.length + end;
+  if (isNaN(end) || end === undefined) finishPosition = array.length;
 
-  for (let i = start; i < finish; i += 1) {
-    resultArray.push(array[i]);
+  if (begin < 0 && (isNaN(end) || end === undefined)) return array;
+
+  if (begin < 0) startPosition = array.length + begin;
+
+  if (begin < 0 && begin < -(array.length)) startPosition = 0;
+
+  if (end < begin) finishPosition = begin;
+
+  if (end < 0) finishPosition = array.length + end;
+
+  if (end > array.length) finishPosition = array.length;
+
+  for (let i = startPosition; i < finishPosition; i += 1) {
+    resultArray[i - startPosition] = array[i];
   }
 
   return resultArray;
