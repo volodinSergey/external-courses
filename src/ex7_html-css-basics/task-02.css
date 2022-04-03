@@ -1,0 +1,9 @@
+.lists {
+    background-color: #1eab1f;;
+}
+
+.image-cats {
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+}
