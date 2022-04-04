@@ -1,0 +1,33 @@
+body {
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+ul li {
+    list-style: none;
+}
+
+.main-title {
+    font-family: 'Send Flowers', cursive;
+}
+
+.ordered-list {
+    font-size: 2em;
+    background-color: darkmagenta;
+}
+
+.paragraph {
+    font-size: 2.5em;
+    background-color: rgb(14, 61, 61);
+}
+
+.image-dog {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
