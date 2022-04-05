@@ -1,0 +1,38 @@
+@import url('./vars.css');
+@import url('./baseSettings.css');
+
+.wrapper {
+    background-color: var(--bgColor-backroundWrapperColor);
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 0px 3px #666;
+
+}
+
+.button {
+    font-size: 2rem;
+    font-weight: 700;
+    width: 290px;
+    height: 80px;
+    color: var(--color-buttonTextColor);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px #555;
+    text-transform: uppercase;
+    background: var(--bgGradient-backgroundButtonGradient);
+    transition: .3s;
+}
+
+.button::before {
+    content: var(--pseudoElementContent);
+    margin-right: 10px;
+    color: var(--color-starColor);
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.button::after {
+    content: var(--pseudoElementContent);
+    margin-left: 10px;
+    color: var(--color-starColor);
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+}

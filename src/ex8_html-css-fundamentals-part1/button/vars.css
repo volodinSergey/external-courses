@@ -1,0 +1,10 @@
+:root {
+    --color-buttonTextColor: #555;
+    --color-starColor: #444;
+
+    --bgColor-backroundWrapperColor: #cbcbcb;
+
+    --bgGradient-backgroundButtonGradient: linear-gradient(#d7d7d7 40%, #b6b6b6 60%);
+
+    --pseudoElementContent: "\2605";
+}
