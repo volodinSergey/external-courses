@@ -1,0 +1,44 @@
+:root {
+    --bgColor-backgroundParentBlockColor: #60B88D;
+    --bgColor-backgroundFirstChildBlockColor: #90CDAF;
+    --bgColor-backgroundSecondChildBlockColor: #BFE3D1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.parent-block,
+.parent-block__child-block {
+    width: 400px;
+    height: 400px;
+}
+
+.parent-block {
+    position: relative;
+    background-color: var(--bgColor-backgroundParentBlockColor);
+
+}
+
+.parent-block__child-block {
+    position: absolute;
+}
+
+.child-block_first-block {
+    background-color: var(--bgColor-backgroundFirstChildBlockColor);
+    top: 10px;
+    left: 10px;
+    z-index: -1;
+}
+
+.child-block_second-block {
+    background-color: var(--bgColor-backgroundSecondChildBlockColor);
+    top: 20px;
+    left: 20px;
+    z-index: -2;
+}
