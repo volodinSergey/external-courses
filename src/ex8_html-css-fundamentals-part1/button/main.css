@@ -36,3 +36,9 @@
     color: var(--color-starColor);
     text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
 }
+
+.button:hover,
+.wrapper:hover {
+    opacity: .9;
+    color: black;
+}

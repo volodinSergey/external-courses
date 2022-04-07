@@ -18,9 +18,3 @@ body {
     transition: .2s;
     cursor: pointer;
 }
-
-.button:hover,
-.wrapper:hover {
-    opacity: .9;
-    color: black;
-}
