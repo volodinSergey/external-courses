@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.block {
+    background-color: #60B88D;
+    width: 500px;
+    height: 500px;
+    box-shadow: 10px 10px 0 #90CDAF, 20px 20px 0 #BFE3D1;
+}
