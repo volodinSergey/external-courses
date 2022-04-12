@@ -1,0 +1,35 @@
+@import url('./baseSettings.css');
+
+.form {
+    width: 700px;
+}
+
+.form__fieldset {
+    padding-top: 15px;
+}
+
+.form__boxes * {
+    margin-bottom: 8px;
+}
+
+.form__title-box .form__title-box-select {
+    height: 100px;
+}
+
+.form__title-box,
+.form__range-box {
+    margin-bottom: 20px;
+}
+
+.form__textarea {
+    width: 200px;
+    height: 70px;
+}
+
+.form__fieldset--small-fieldset {
+    margin-bottom: 20px;
+}
+
+.form__password-box {
+    margin-bottom: 20px;
+}
