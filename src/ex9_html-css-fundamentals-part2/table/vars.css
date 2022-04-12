@@ -1,0 +1,10 @@
+:root {
+    --color-tableHeadLineTextColor: #838fa0;
+    --color-tableBodyTextColor: #62778d;
+
+    --bgColor-tableHeadlineBgColor: #e3eaf3;
+    --bgColor-moreDarkTableBodyBgColor: #e3eaf3;
+    --bgColor-lightTableBodyBgColor: #ebeff5;
+
+    --activeColor-activeTableRowColor: #e2e5e9;
+}
