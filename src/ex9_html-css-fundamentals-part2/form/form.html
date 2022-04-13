@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+
+<body>
+    <form class="form" action="https://httpbin.org/headers" method="get">
+        <fieldset class="form__fieldset form__fieldset--big-fieldset">
+            <legend class="form__fieldset-legend">Personal data</legend>
+
+            <div class="form__boxes">
+                <div class="form__boxes-box">
+                    <label for="surname">Surname</label>
+                    <input id="surname" type=" text" name="surname">
+                </div>
+
+                <div class="form__boxes-box first-box">
+                    <label for="first-name">First name</label>
+                    <input id="first-name" type="text" name="First name">
+                </div>
+
+                <div class="form__boxes-box middle-box">
+                    <label for="middle-name">Middle name</label>
+                    <input id="middle-name" type="text" name="Middle name">
+                </div>
+
+                <div class="form__boxes-box you-are-box">
+                    <label>You are</label>
+                    <input id="male" type="radio" name="gender">
+                    <label for="male">male</label>
+                    <input id="female" type="radio" name="gender">
+                    <label for="female">female</label>
+                </div>
+
+                <div class="form__boxes-box age-box">
+                    <label for="age">Age</label>
+                    <input class="number" id="age" type="number" min="18" max="101" name="Age">
+                </div>
+
+                <div class="form__boxes-box country-box">
+                    <label for="country_name">Country of Residence</label>
+                    <select name="Country of Residence" id="country_name">
+                        <option value="Russia">Russia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="USA">USA</option>
+                        <option value="Poland">Poland</option>
+                        <option value="France">France</option>
+                        <option value="Other country">Other country</option>
+                    </select>
+                </div>
+
+                <div class="form__boxes-box city-box">
+                    <span>City</span>
+
+                    <input id="city" type="checkbox" name="City" value="Ryazan">
+                    <label for="city">Ryazan</label>
+
+                    <input id="city2" type="checkbox" name="City" value="Moscow">
+                    <label for="city2">Moscow</label>
+                </div>
+
+                <div class="form__boxes-box photo-box">
+                    <label for="photo">Photography</label>
+                    <input id="photo" type="file" name="file">
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="form__title-box">
+                <label class="form__title-box-title">Title</label>
+                <select class="form__title-box-select" name="Profession" multiple="multiple">
+                    <option class="techno_title" value="Technologies" disabled>Technologies</option>
+                    <option class="profession" value="Web master">Web master</option>
+                    <option value="Database Administrator" class="profession">Database Administrator</option>
+                    <option value="Computer-aided design" class="profession">Computer-aided design</option>
+                    <option class="techno_title" value="Finance" disabled>Finance</option>
+                    <option class="profession" value="Economic Planning">Economic Planning</option>
+                    <option value="Managment Accounting" class="profession">Managment Accounting</option>
+                    <option value="Budgeting and planning" class="profession">Budgeting and planning</option>
+                </select>
+            </div>
+
+            <div class="form__range-box">
+                <label for="salary">Salary</label>
+                <input id="salary" value="Salary" type="range" min="20" max="100" step="1" name="Salary">
+            </div>
+
+            <textarea class="form__textarea" name="Information" placeholder="Tell us about yourself..."></textarea>
+        </fieldset>
+
+        <fieldset class="form__fieldset form__fieldset--small-fieldset">
+            <legend>Contact information</legend>
+
+            <div class="form__boxes">
+
+                <div class="form__boxes site-box">
+                    <label for="site">Site</label>
+                    <input id="site" type="url" name="Site">
+                </div>
+
+                <div class="form__boxes email-box">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="Email">
+                </div>
+
+                <div class="form__boxes phone-box">
+                    <label for="phone">Phone</label>
+                    <input id="phone" type="tel" name="Phone">
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="form__password-box">
+            <label for="password" class="form__password-box_text">Password</label>
+            <input id="password" class="form__password-box_input" type="password" name="Password" required>
+        </div>
+
+        <div class="form__buttons">
+            <button class="form__buttons-button" type="submit">Отправить</button>
+            <button class="form__buttons-button" type="reset">Сбросить</button>
+        </div>
+    </form>
+</body>
+
+</html>

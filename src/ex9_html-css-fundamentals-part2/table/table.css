@@ -1,0 +1,46 @@
+@import url('./vars.css');
+@import url('./baseSettings.css');
+
+#table {
+    width: 600px;
+}
+
+#table-head {
+    font-size: 14px;
+    background-color: var(--bgColor-tableHeadlineBgColor);
+    color: var(--color-tableHeadLineTextColor);
+}
+
+.table__head-row_item {
+    padding: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.table__body {
+    color: var(--color-tableBodyTextColor);
+}
+
+.table__body-row_item {
+    padding: 10px 12px;
+}
+
+.table__body-row_item {
+    text-align: left;
+}
+
+.table__body-row:nth-child(odd) {
+    background-color: var(--bgColor-moreDarkTableBodyBgColor);
+}
+
+.table__body-row:nth-child(even) {
+    background-color: var(--bgColor-lightTableBodyBgColor);
+}
+
+.table__body-row:hover {
+    background-color: var(--activeColor-activeTableRowColor);
+}
+
+.js-activeClass {
+    background-color: var(--activeColor-activeTableRowColor);
+}
