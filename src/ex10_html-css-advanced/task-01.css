@@ -6,11 +6,6 @@
     /* Jumping ball vars */
     --blocksColor: purple;
     --bgColor-ballBgBorderColor: #364652;
-
-    /* Infinite animation vars */
-    --startGradient: linear-gradient(90deg, rgba(22, 16, 124, 1) 0%, rgba(217, 40, 106, 1) 100%, rgba(0, 212, 255, 1) 100%);
-    --gradientDuringAnimation: linear-gradient(90deg, rgba(22, 16, 124, 1) 0%, rgba(0, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
-
 }
 
 /* Base settings */
@@ -191,7 +186,7 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: var(--startGradient);
+    box-shadow: 0 -200px 100px -120px peru inset;
     animation: strangeAnimation 10s 1.5s linear infinite;
 }
 
@@ -207,21 +202,21 @@ body {
 
     40% {
         transform: skew(0deg);
-        background: var(--gradientDuringAnimation)
+        box-shadow: 0 -200px 100px -120px peru inset;
     }
 
     60% {
         width: 200px;
         height: 200px;
         transform: skew(45deg);
-        background: var(--gradientDuringAnimation)
+        box-shadow: 0 -200px 100px -100px blue inset;
     }
 
     80% {
         width: 200px;
         height: 200px;
         transform: rotate(90deg) skew(0deg);
-        background: var(--gradientDuringAnimation)
+        box-shadow: 0 -200px 100px -100px blue inset;
     }
 
     100% {
@@ -229,6 +224,6 @@ body {
         height: 200px;
         transform: rotate(90deg) skew(0deg);
         border-radius: 50%;
-        background: var(--gradientDuringAnimation);
+        box-shadow: 0 -200px 100px -100px blue inset;
     }
 }
