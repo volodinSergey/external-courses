@@ -1,0 +1,234 @@
+:root {
+    /* Loader vars */
+    --bgColor-bgBorderLoaderColor: #5603AD;
+    --bgColor-bgBorderLeftLoaderColor: aqua;
+
+    /* Jumping ball vars */
+    --blocksColor: purple;
+    --bgColor-ballBgBorderColor: #364652;
+
+    /* Infinite animation vars */
+    --startGradient: linear-gradient(90deg, rgba(22, 16, 124, 1) 0%, rgba(217, 40, 106, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    --gradientDuringAnimation: linear-gradient(90deg, rgba(22, 16, 124, 1) 0%, rgba(0, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+
+}
+
+/* Base settings */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapper .box:not(:last-child) {
+    margin-bottom: 150px;
+}
+
+.title {
+    font-family: sans-serif;
+    letter-spacing: .2em;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Loader */
+.loader-box__loader {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 6px solid var(--bgColor-bgBorderLoaderColor);
+    border-radius: 50%;
+    border-left-color: var(--bgColor-bgBorderLeftLoaderColor);
+    animation: loader .5s linear infinite;
+}
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Jumping ball */
+.ball-box {
+    position: relative;
+    height: 110px;
+    width: 150px;
+}
+
+.ball-box__block {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 30px;
+    border: 3px solid black;
+    background-color: var(--blocksColor);
+}
+
+.ball-box__block_first-block {
+    left: 0;
+}
+
+.ball-box__block_second-block {
+    right: 0;
+}
+
+.ball-box__ball {
+    position: absolute;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    border: 6px solid var(--bgColor-ballBgBorderColor);
+    border-radius: 50%;
+    animation-delay: 3s;
+    animation: bounce 1s linear infinite,
+        moveFromSideToSide 1s linear infinite alternate-reverse;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: 30px;
+    }
+
+    50% {
+        bottom: 85px;
+    }
+
+    100% {
+        bottom: 30px;
+    }
+}
+
+@keyframes moveFromSideToSide {
+    0% {
+        left: 0;
+    }
+
+    10% {
+        left: 10px;
+    }
+
+    15% {
+        left: 15px;
+    }
+
+    20% {
+        left: 20px;
+    }
+
+    25% {
+        left: 25px;
+    }
+
+    30% {
+        left: 30px;
+    }
+
+    35% {
+        left: 35px;
+    }
+
+    40% {
+        left: 40px;
+    }
+
+    45% {
+        left: 45px;
+    }
+
+    50% {
+        left: 50px;
+    }
+
+    55% {
+        left: 55px;
+    }
+
+    60% {
+        left: 60px;
+    }
+
+    65% {
+        left: 65px;
+    }
+
+    70% {
+        left: 70px;
+    }
+
+    75% {
+        left: 75px;
+    }
+
+    80% {
+        left: 80px;
+    }
+
+    85% {
+        left: 85px;
+    }
+
+    90% {
+        left: 90px;
+    }
+
+    95% {
+        left: 95px;
+    }
+
+    100% {
+        left: 100px;
+    }
+}
+
+/* Infinite animation */
+.infinite-animation {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--startGradient);
+    animation: strangeAnimation 10s 1.5s linear infinite;
+}
+
+@keyframes strangeAnimation {
+    0% {
+        border-radius: 50%;
+    }
+
+    20% {
+        transform: skew(0deg);
+        border-radius: 0;
+    }
+
+    40% {
+        transform: skew(0deg);
+        background: var(--gradientDuringAnimation)
+    }
+
+    60% {
+        width: 200px;
+        height: 200px;
+        transform: skew(45deg);
+        background: var(--gradientDuringAnimation)
+    }
+
+    80% {
+        width: 200px;
+        height: 200px;
+        transform: rotate(90deg) skew(0deg);
+        background: var(--gradientDuringAnimation)
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        transform: rotate(90deg) skew(0deg);
+        border-radius: 50%;
+        background: var(--gradientDuringAnimation);
+    }
+}
