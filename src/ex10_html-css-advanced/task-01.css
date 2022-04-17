@@ -1,14 +1,11 @@
 :root {
-    /* Loader vars */
     --bgColor-bgBorderLoaderColor: #5603AD;
     --bgColor-bgBorderLeftLoaderColor: aqua;
-
-    /* Jumping ball vars */
-    --blocksColor: purple;
     --bgColor-ballBgBorderColor: #364652;
+
+    --blocksColor: purple;
 }
 
-/* Base settings */
 *,
 *::before,
 *::after {
@@ -31,7 +28,6 @@ body {
     font-weight: 600;
 }
 
-/* Loader */
 .loader-box__loader {
     display: inline-block;
     width: 70px;
@@ -48,7 +44,6 @@ body {
     }
 }
 
-/* Jumping ball */
 .ball-box {
     position: relative;
     height: 110px;
@@ -180,7 +175,6 @@ body {
     }
 }
 
-/* Infinite animation */
 .infinite-animation {
     display: inline-block;
     width: 150px;
