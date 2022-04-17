@@ -1,9 +1,9 @@
 :root {
     --bgColor-bgBorderLoaderColor: #5603AD;
-    --bgColor-bgBorderLeftLoaderColor: aqua;
+    --bgColor-bgBorderLeftLoaderColor: #00FFFF;
     --bgColor-ballBgBorderColor: #364652;
 
-    --blocksColor: purple;
+    --blocksColor: #800080;
 }
 
 *,
@@ -55,7 +55,7 @@ body {
     bottom: 0;
     width: 50px;
     height: 30px;
-    border: 3px solid black;
+    border: 3px solid #000;
     background-color: var(--blocksColor);
 }
 
@@ -180,7 +180,7 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    box-shadow: 0 -200px 100px -120px peru inset;
+    box-shadow: 0 -200px 100px -120px #cd853f inset;
     animation: strangeAnimation 10s 1.5s linear infinite;
 }
 
@@ -196,21 +196,21 @@ body {
 
     40% {
         transform: skew(0deg);
-        box-shadow: 0 -200px 100px -120px peru inset;
+        box-shadow: 0 -200px 100px -120px #cd853f inset;
     }
 
     60% {
         width: 200px;
         height: 200px;
         transform: skew(45deg);
-        box-shadow: 0 -200px 100px -100px blue inset;
+        box-shadow: 0 -200px 100px -100px #0047AB inset;
     }
 
     80% {
         width: 200px;
         height: 200px;
         transform: rotate(90deg) skew(0deg);
-        box-shadow: 0 -200px 100px -100px blue inset;
+        box-shadow: 0 -200px 100px -100px #0047AB inset;
     }
 
     100% {
@@ -218,6 +218,6 @@ body {
         height: 200px;
         transform: rotate(90deg) skew(0deg);
         border-radius: 50%;
-        box-shadow: 0 -200px 100px -100px blue inset;
+        box-shadow: 0 -200px 100px -100px #0047AB inset;
     }
 }
