@@ -1,0 +1,123 @@
+:root {
+    --bgColor-bgBorderLoaderColor: #5603AD;
+    --bgColor-bgBorderLeftLoaderColor: #00FFFF;
+    --bgColor-ballBgBorderColor: #364652;
+
+    --blocksColor: #800080;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.wrapper .box:not(:last-child) {
+    margin-bottom: 150px;
+}
+
+.title {
+    font-family: sans-serif;
+    letter-spacing: .2em;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.loader-box__loader {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 6px solid var(--bgColor-bgBorderLoaderColor);
+    border-radius: 50%;
+    border-left-color: var(--bgColor-bgBorderLeftLoaderColor);
+    animation: loader .5s linear infinite;
+}
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ball-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+}
+
+.ball-box__block {
+    width: 50px;
+    height: 100%;
+    border: 3px solid #000;
+    background-color: var(--blocksColor);
+}
+
+.ball-box__ball {
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-75px);
+    border: 6px solid var(--bgColor-ballBgBorderColor);
+    border-radius: 50%;
+    animation: moveFromSideToSide 1s linear infinite alternate-reverse;
+}
+
+@keyframes moveFromSideToSide {
+    from {
+        transform: translate(-75px);
+    }
+
+    to {
+        transform: translateX(75px);
+    }
+}
+
+.infinite-animation {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 -200px 100px -120px #cd853f inset;
+    animation: strangeAnimation 10s 1.5s linear infinite;
+}
+
+@keyframes strangeAnimation {
+    0% {
+        border-radius: 50%;
+    }
+
+    20% {
+        transform: skew(0deg);
+        border-radius: 0;
+    }
+
+    40% {
+        transform: skew(0deg);
+        box-shadow: 0 -200px 100px -120px #cd853f inset;
+    }
+
+    60% {
+        width: 200px;
+        height: 200px;
+        transform: skew(45deg);
+        box-shadow: 0 -200px 100px -100px #0047AB inset;
+    }
+
+    80% {
+        width: 200px;
+        height: 200px;
+        transform: rotate(90deg) skew(0deg);
+        box-shadow: 0 -200px 100px -100px #0047AB inset;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        transform: rotate(90deg) skew(0deg);
+        border-radius: 50%;
+        box-shadow: 0 -200px 100px -100px #0047AB inset;
+    }
+}
