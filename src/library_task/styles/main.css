@@ -3,31 +3,31 @@
 @import url('./vars.css');
 @import url('./baseSettings.css');
 
-.header {
-    background-color: var(--bgColor-headerBgColor);
-}
-
-.header__box,
-.footer__box {
+.header,
+.footer {
     display: flex;
     justify-content: flex-end;
 }
 
-.header-box__help,
-.header-box__user {
+.header {
+    background-color: var(--bgColor-headerBgColor);
+}
+
+.header__help,
+.header__user {
     display: flex;
     align-items: center;
 }
 
-.header-box__help {
+.header__help {
     gap: 10px;
 }
 
-.header-box__help-item {
+.header__help-item {
     padding-right: 20px;
 }
 
-.header-box__help-button {
+.header__help-button {
     font-size: inherit;
     position: relative;
     color: var(--color-headerHelpColor);
@@ -35,11 +35,11 @@
     cursor: pointer;
 }
 
-.header-box__help-button:hover {
+.header__help-button:hover {
     color: var(--color-whiteColor);
 }
 
-.header-box__help-item:not(:last-child) .header-box__help-button::after {
+.header__help-item:not(:last-child) .header-box__help-button::after {
     content: '';
     position: absolute;
     display: block;
@@ -52,13 +52,13 @@
     transform: translateY(-50%);
 }
 
-.header-box__user {
+.header__user {
     gap: 15px;
     background-color: var(--color-blueColor);
     padding: 10px 20px;
 }
 
-.header-box__user-img {
+.header__user-img {
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -67,11 +67,11 @@
     object-position: center;
 }
 
-.header-box__user-name {
+.header__user-name {
     color: var(--color-whiteColor);
 }
 
-.header-box__user-button {
+.header__user-button {
     position: relative;
     width: 16px;
     height: 16px;
@@ -81,11 +81,11 @@
     transition: .3s;
 }
 
-.header-box__user-button:hover {
+.header__user-button:hover {
     transform: rotate(-360deg) scale(1.2);
 }
 
-.header-box__user-button::before {
+.header__user-button::before {
     content: url('./../images/arrow-down.svg');
     position: absolute;
     height: 12px;
@@ -98,7 +98,7 @@
     background-color: var(--bgColor-footerBgColor);
 }
 
-.footer-box__item {
+.footer__item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,15 +106,15 @@
     height: 45px;
 }
 
-.footer-box__item--first {
+.footer__item--first {
     background-color: var(--color-semiDarkColor);
 }
 
-.footer-box__item--second {
+.footer__item--second {
     background-color: var(--color-blueColor);
 }
 
-.footer-box__item-button {
+.footer__item-button {
     position: relative;
     width: 20px;
     height: 20px;
@@ -124,24 +124,24 @@
     transition: .3s;
 }
 
-.footer-box__item-button:hover {
+.footer__item-button:hover {
     transform: scale(1.3);
 }
 
-.footer-box__item-button--gear {
+.footer__item-button--gear {
     background-color: transparent;
 }
 
-.footer-box__item-button--question::before {
+.footer__item-button--question::before {
     content: url('./../images/question.svg');
 }
 
-.footer-box__item-button--gear::before {
+.footer__item-button--gear::before {
     content: url('./../images/gear.svg');
 }
 
-.footer-box__item-button--question::before,
-.footer-box__item-button--gear::before {
+.footer__item-button--question::before,
+.footer__item-button--gear::before {
     position: absolute;
     height: 14px;
     left: 50%;
@@ -150,56 +150,56 @@
 }
 
 @media (max-width: 968px) {
-    .header-box {
+    .header {
         justify-content: space-between;
     }
 }
 
 @media (max-width: 720px) {
-    .header-box__user {
+    .header__user {
         gap: 10px;
         padding: 8px 10px;
     }
 
-    .header-box__user-img {
+    .header__user-img {
         width: 27px;
         height: 27px;
     }
 }
 
 @media (max-width: 420px) {
-    .header-box__help {
+    .header__help {
         gap: 0;
     }
 
-    .header-box__help-item {
+    .header__help-item {
         padding-right: 0;
     }
 
-    .header-box__help-button {
+    .header__help-button {
         font-size: 13px;
     }
 
-    .header-box__help-button::after {
+    .header__help-button::after {
         width: 0;
         height: 0;
     }
 
-    .header-box__user {
+    .header__user {
         gap: 10px;
         padding: 8px 10px;
     }
 
-    .header-box__user-name {
+    .header__user-name {
         font-size: 13px;
     }
 
-    .header-box__user-img {
+    .header__user-img {
         width: 27px;
         height: 27px;
     }
 
-    .footer-box {
+    .footer {
         justify-content: space-between;
     }
 }
