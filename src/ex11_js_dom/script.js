@@ -8,8 +8,6 @@ const sliderConfig = {
 };
 
 const keyCodes = {
-  buttonAKeyCode: 'a',
-  buttonDKeyCode: 'd',
   arrowLeftKeyCode: 'ArrowLeft',
   arrowRightKeyCode: 'ArrowRight',
 };
@@ -34,8 +32,6 @@ const slider = (config) => {
   } = config;
 
   const {
-    buttonAKeyCode,
-    buttonDKeyCode,
     arrowLeftKeyCode,
     arrowRightKeyCode,
   } = keyCodes;
@@ -93,9 +89,9 @@ const slider = (config) => {
     document.addEventListener('keydown', (e) => {
       const keyCode = e.key;
 
-      if ((keyCode === buttonAKeyCode) || (keyCode === arrowLeftKeyCode)) moveSlidesBackward();
+      if (keyCode === arrowLeftKeyCode) moveSlidesBackward();
 
-      if ((keyCode === buttonDKeyCode) || (keyCode === arrowRightKeyCode)) moveSlidesForward();
+      if (keyCode === arrowRightKeyCode) moveSlidesForward();
     });
   };
 
