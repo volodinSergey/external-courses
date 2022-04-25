@@ -7,6 +7,13 @@ const sliderConfig = {
   activeClass: 'activeSlide',
 };
 
+const keyCodes = {
+  buttonAKeyCode: 'a',
+  buttonDKeyCode: 'd',
+  arrowLeftKeyCode: 'ArrowLeft',
+  arrowRightKeyCode: 'ArrowRight',
+};
+
 const slidesDataBase = [
   'images/slides/slide1.jpg',
   'images/slides/slide2.jpg',
@@ -25,6 +32,13 @@ const slider = (config) => {
     slidesClass,
     activeClass,
   } = config;
+
+  const {
+    buttonAKeyCode,
+    buttonDKeyCode,
+    arrowLeftKeyCode,
+    arrowRightKeyCode,
+  } = keyCodes;
 
   let slideIndex = 0;
 
@@ -74,6 +88,18 @@ const slider = (config) => {
 
     if (target && target === nextButton) moveSlidesForward();
   });
+
+  const moveSlidesByKeyboard = () => {
+    document.addEventListener('keydown', (e) => {
+      const keyCode = e.key;
+
+      if ((keyCode === buttonAKeyCode) || (keyCode === arrowLeftKeyCode)) moveSlidesBackward();
+
+      if ((keyCode === buttonDKeyCode) || (keyCode === arrowRightKeyCode)) moveSlidesForward();
+    });
+  };
+
+  moveSlidesByKeyboard();
 };
 
 slider(sliderConfig);
