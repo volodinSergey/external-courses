@@ -1,0 +1,138 @@
+:root {
+    --bgColor-bodyBgColor: rgba(0, 0, 0, 0.8);
+
+    --hoverButtonColor: rgba(0, 0, 0, 0.2);
+    --activeButtonColor: rgba(0, 0, 0, 0.6);
+
+    --buttonAndImagesBorderRadius: 20px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 100px 10px 0;
+    background-color: var(--bgColor-bodyBgColor);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.slider {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.slider::before {
+    content: '';
+    display: block;
+    padding-top: 70%;
+}
+
+.slider__slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.slider__slides-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: .5s;
+    border-radius: var(--buttonAndImagesBorderRadius);
+}
+
+.slider__buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__buttons-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    transition: .3s;
+}
+
+.slider__buttons-button_prev {
+    border-bottom-left-radius: var(--buttonAndImagesBorderRadius);
+    border-top-left-radius: var(--buttonAndImagesBorderRadius);
+}
+
+.slider__buttons-button_next {
+    border-top-right-radius: var(--buttonAndImagesBorderRadius);
+    border-bottom-right-radius: var(--buttonAndImagesBorderRadius);
+}
+
+.slider__buttons-button_prev,
+.slider__buttons-button_next {
+    position: relative;
+}
+
+.slider__buttons-button_prev::before {
+    content: url(./images/icons/icon_arrow-prev.svg);
+}
+
+.slider__buttons-button_next::before {
+    content: url(./images/icons/icon_arrow-next.svg);
+}
+
+.slider__buttons-button_prev::before,
+.slider__buttons-button_next::before {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.slider__buttons-button:hover {
+    background-color: var(--hoverButtonColor);
+}
+
+.slider__buttons-button:active {
+    background-color: var(--activeButtonColor);
+}
+
+.slider__buttons-button:hover.slider__buttons-button_prev::before,
+.slider__buttons-button:hover.slider__buttons-button_next::before {
+    opacity: 1;
+}
+
+.activeSlide {
+    opacity: 1;
+    animation: fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
