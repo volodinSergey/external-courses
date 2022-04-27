@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My library</title>
+  <link rel="stylesheet" href="./styles/main.css">
 </head>
-<body>
 
+<body>
+  <div class="flex-wrapper">
+
+    <header class="header">
+      <ul class="header__help">
+        <li class="header__help-item">
+          <button class="header__help-button">Help Center</button>
+        </li>
+
+        <li class="header__help-item">
+          <button class="header__help-button">Our Support</button>
+        </li>
+      </ul>
+
+      <div class="header__user">
+        <img class="header__user-img" src="./images/avatar-image.png" alt="user image">
+
+        <span class="header__user-name">Jon Doe</span>
+
+        <button class="header__user-button"></button>
+      </div>
+    </header>
+
+    <main class="main"></main>
+
+    <footer class="footer">
+      <div class="footer__item footer__item--first">
+        <button class="footer__item-button footer__item-button--question"></button>
+      </div>
+
+      <div class="footer__item footer__item--second">
+        <button class="footer__item-button footer__item-button--gear"></button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="./scripts/script.js"></script>
 </body>
+
 </html>
