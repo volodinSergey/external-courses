@@ -1,3 +1,5 @@
+import { renderBooksFromDataBase } from './modules/renderBooks.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Code will be here soon......
+  renderBooksFromDataBase();
 });
