@@ -16,7 +16,11 @@ const sidebarTagsDataBase = [
   },
 
   {
-    tagText: 'Non fiction',
+    tagText: 'One more Tag',
+  },
+
+  {
+    tagText: 'Another tag',
   },
 ];
 
