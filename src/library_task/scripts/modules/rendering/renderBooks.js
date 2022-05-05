@@ -1,7 +1,7 @@
-import { booksDataBase } from '../dataBases/imagesDataBase.js';
-import { getRating } from './starRating.js';
+import { booksDataBase } from '../../dataBases/booksDataBase.js';
+import { getRating } from '../starRating.js';
 
-const renderBooksFromDataBase = () => {
+const renderBooks = () => {
   const bookListParent = document.querySelector('.books-list');
 
   booksDataBase.forEach(({
@@ -26,4 +26,4 @@ const renderBooksFromDataBase = () => {
   });
 };
 
-export { renderBooksFromDataBase };
+export { renderBooks };
