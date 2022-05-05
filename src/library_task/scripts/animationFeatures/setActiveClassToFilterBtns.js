@@ -2,6 +2,8 @@ const setActiveClassToFilterButtons = (filterBtnsParent, filterBtnsSelector, act
   const filterButtonsParent = document.querySelector(filterBtnsParent);
   const filterButtons = document.querySelectorAll(`.${filterBtnsSelector}`);
 
+  filterButtons[0].classList.add(activeClass);
+
   filterButtonsParent.addEventListener('click', (e) => {
     const target = e.target;
 

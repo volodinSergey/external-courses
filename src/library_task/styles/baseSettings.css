@@ -56,7 +56,6 @@ button {
     flex-basis: 200px;
     height: 375px;
     width: 200px;
-    transition: .3s;
     cursor: pointer;
 }
 

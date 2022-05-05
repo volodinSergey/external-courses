@@ -2,7 +2,7 @@ import { renderNavigationList } from './modules/rendering/renderNavigationList.j
 import { renderSideBarTags } from './modules/rendering/renderSidebarTags.js';
 import { renderBooks } from './modules/rendering/renderBooks.js';
 
-import { setActiveClassToFilterButtons } from './modules/setActiveClassToFilterBtns.js';
+import { setActiveClassToFilterButtons } from './animationFeatures/setActiveClassToFilterBtns.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderNavigationList();
