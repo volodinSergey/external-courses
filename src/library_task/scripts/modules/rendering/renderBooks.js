@@ -1,15 +1,15 @@
-import { booksDataBase } from '../../dataBases/booksDataBase.js';
-import { getRating } from '../starRating.js';
+import { renderRating, ratingLogic } from '../starRating.js';
 
-const renderBooks = () => {
+const renderBooks = (dataBase) => {
   const bookListParent = document.querySelector('.books-list');
 
-  booksDataBase.forEach(({
+  dataBase.forEach(({
     image, title, autor, rating,
   }) => {
     const book = document.createElement('li');
 
     book.classList.add('books-list__book', 'book');
+
     book.innerHTML = `
             <img class="book__img" src=${image} alt="Book image">
 
@@ -19,11 +19,13 @@ const renderBooks = () => {
               by <em class="book__autor-name">${autor}</em>
             </p>
 
-            ${getRating(rating)}
+            ${renderRating(rating)}
       `;
 
-    bookListParent.append(book);
+    bookListParent.appendChild(book);
   });
+
+  ratingLogic();
 };
 
 export { renderBooks };

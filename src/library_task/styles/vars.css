@@ -17,5 +17,7 @@
     --sidebarDividerBorderTopColor: #141824;
     --sidebarDividerBorderBottomColor: #282f41;
 
-    --starRatingColor: #ffab00;
+    --ratingDefaultColor: #dcdcdc;
+    --ratingHoverColor: #989898;
+    --ratingActiveColor: #ffab00;
 }
