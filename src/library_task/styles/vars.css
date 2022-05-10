@@ -3,7 +3,21 @@
     --color-blueColor: #15a4fa;
     --color-whiteColor: #fff;
     --color-semiDarkColor: #1f2637;
+    --color-grayColor: #78829d;
+    --color-darkGreyColor: #465a6f;
+    --color-lightColor: #eef1f7;
+    --color-bigContentTitleColor: #444c63;
+    --color-lightGrayColor: #8c97b2;
 
     --bgColor-headerBgColor: #2f364a;
     --bgColor-footerBgColor: #181e2c;
+    --bgColor-addButtonBgColor: #f2795a;
+
+    --sidebarDividerColor: #19202e;
+    --sidebarDividerBorderTopColor: #141824;
+    --sidebarDividerBorderBottomColor: #282f41;
+
+    --ratingDefaultColor: #dcdcdc;
+    --ratingHoverColor: #989898;
+    --ratingActiveColor: #ffab00;
 }

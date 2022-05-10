@@ -9,6 +9,10 @@ body {
     height: 100vh;
 }
 
+button {
+    cursor: pointer;
+}
+
 .flex-wrapper {
     min-height: 100%;
     display: flex;
@@ -17,4 +21,33 @@ body {
 
 .main {
     flex: 1 1 auto;
+    margin-top: 43px;
+}
+
+.divider {
+    background-color: var(--sidebarDividerColor);
+    border-top: 2px solid var(--sidebarDividerBorderTopColor);
+    border-bottom: 2px solid var(--sidebarDividerBorderBottomColor);
+    height: 5px;
+}
+
+.button {
+    font-size: 0.9rem;
+    font-weight: 600;
+    position: relative;
+    color: var(--color-whiteColor);
+    background-color: var(--bgColor-addButtonBgColor);
+    width: 100%;
+    text-transform: uppercase;
+    padding: 17px;
+    border-radius: 7px;
+}
+
+.button::before {
+    content: url('./../images/plus-icon-for-button.svg');
+    position: absolute;
+    display: block;
+    left: 10px;
+    width: 15px;
+    height: 15px;
 }

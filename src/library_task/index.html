@@ -32,7 +32,90 @@
       </div>
     </header>
 
-    <main class="main"></main>
+    <main class="main">
+      <aside class="main__sidebar sidebar">
+        <div class="sidebar__box">
+          <button class="sidebar__box-button button">Add a book</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <nav class="sidebar-nav">
+          <ul class="sidebar-nav__list"></ul>
+        </nav>
+
+        <div class="divider"></div>
+
+        <ul class="tags-list"></ul>
+
+        <div class="divider"></div>
+
+        <ul class="history-list">
+          <li class="history-list__item history-item">
+            <img class="history-item__img" src="./images/time.svg" alt="time icon">
+
+            <div class="history-item__content">
+              <p class="history-item__content-infotext">
+                You added <span class="history-item__content-infotext_book">Fight Club</span>
+                by <em class="history-item__content-infotext_autor">Chuck Palahniuk</em>
+                to your <span class="history-item__content-infotext_category">Must Read Titles</span> .
+              </p>
+              <span class="history-item__content-time">
+                <span class="history-item__content-time_number">24</span>
+                minutes ago
+              </span>
+            </div>
+          </li>
+
+          <li class="history-list__item history-item">
+            <img class="history-item__img" src="./images/time.svg" alt="time icon">
+
+            <div class="history-item__content">
+              <p class="history-item__content-infotext">
+                You added <span class="history-item__content-infotext_book">Twilight</span>
+                by <em class="history-item__content-infotext_autor">Stephany Mayer</em>
+                to your <span class="history-item__content-infotext_category">Must Read Titles</span>.
+              </p>
+              <span class="history-item__content-time">
+                <span class="history-item__content-time_number">24</span>
+                minutes ago
+              </span>
+            </div>
+          </li>
+        </ul>
+
+      </aside>
+
+      <section class="main__content content">
+        <div class="content__wrapper">
+          <h1 class="content__wrapper-title">Browse Available Books</h1>
+
+          <div class="content__wrapper-box content-box">
+            <ul class="content-box__filters">
+              <li class="content-box__filters-filter ">
+                <button class="content-box__filters-filter_button">All books</button>
+              </li>
+              <li class="content-box__filters-filter">
+                <button class="content-box__filters-filter_button">Most recent</button>
+              </li>
+              <li class="content-box__filters-filter">
+                <button class="content-box__filters-filter_button">Most poplular</button>
+              </li>
+              <li class="content-box__filters-filter">
+                <button class="content-box__filters-filter_button">Free books</button>
+              </li>
+            </ul>
+
+            <div class="content-box__search-wrapper">
+              <input class="content-box__search" type="text" placeholder="Enter keywords">
+            </div>
+          </div>
+        </div>
+
+        <ul class="content__books-list books-list"></ul>
+      </section>
+
+    </main>
 
     <footer class="footer">
       <div class="footer__item footer__item--first">
@@ -46,7 +129,7 @@
 
   </div>
 
-  <script src="./scripts/script.js"></script>
+  <script type="module" src="./scripts/script.js"></script>
 </body>
 
 </html>

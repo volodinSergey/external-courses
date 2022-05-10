@@ -1,0 +1,26 @@
+.book {
+    flex-basis: 200px;
+    height: 375px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.book__img {
+    width: 100%;
+    height: 275px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.book__title {
+    color: var(--color-bigContentTitleColor);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.book__autor {
+    color: #6f7d95;
+    margin-bottom: 10px;
+
+}
