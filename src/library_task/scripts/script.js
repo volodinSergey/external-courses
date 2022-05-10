@@ -4,7 +4,7 @@ import { renderBooks } from './modules/rendering/renderBooks.js';
 import { renderNavigationList } from './modules/rendering/renderNavigationList.js';
 import { renderSideBarTags } from './modules/rendering/renderSidebarTags.js';
 
-import { setActiveClassToFilterButtons } from './animationFeatures/setActiveClassToFilterBtns.js';
+import { filtersModule } from './modules/filter.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderBooks(booksDataBase);
@@ -13,9 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderSideBarTags();
 
-  setActiveClassToFilterButtons(
-    '.content-box__filters',
-    'content-box__filters-filter_button',
-    'activeFilter',
-  );
+  filtersModule();
 });
