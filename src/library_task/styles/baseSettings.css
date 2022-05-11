@@ -30,24 +30,3 @@ button {
     border-bottom: 2px solid var(--sidebarDividerBorderBottomColor);
     height: 5px;
 }
-
-.button {
-    font-size: 0.9rem;
-    font-weight: 600;
-    position: relative;
-    color: var(--color-whiteColor);
-    background-color: var(--bgColor-addButtonBgColor);
-    width: 100%;
-    text-transform: uppercase;
-    padding: 17px;
-    border-radius: 7px;
-}
-
-.button::before {
-    content: url('./../images/plus-icon-for-button.svg');
-    position: absolute;
-    display: block;
-    left: 10px;
-    width: 15px;
-    height: 15px;
-}
