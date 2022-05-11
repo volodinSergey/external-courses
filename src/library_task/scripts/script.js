@@ -6,6 +6,8 @@ import { renderSideBarTags } from './modules/rendering/renderSidebarTags.js';
 
 import { filtersModule } from './modules/filter.js';
 
+import { modalsModule } from './modules/modals/modals.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   renderBooks(booksDataBase);
 
@@ -14,4 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSideBarTags();
 
   filtersModule();
+
+  modalsModule();
 });

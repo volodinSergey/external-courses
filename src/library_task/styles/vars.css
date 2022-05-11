@@ -11,7 +11,10 @@
 
     --bgColor-headerBgColor: #2f364a;
     --bgColor-footerBgColor: #181e2c;
-    --bgColor-addButtonBgColor: #f2795a;
+
+    --bgColor-addBookButtonBgColor: #f2795a;
+    --bgColor-addBookButtonHoverColor: #e75f3d;
+    --bgColor-addBookButtonActiveColor: #774437;
 
     --sidebarDividerColor: #19202e;
     --sidebarDividerBorderTopColor: #141824;

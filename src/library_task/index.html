@@ -10,6 +10,35 @@
 </head>
 
 <body>
+  <div class="modal">
+    <div class="modal__body">
+      <div class="modal__body-top">
+        <button class="modal__close-button" data-close-modal>
+          <div class="modal__close-button--first-line"></div>
+          <div class="modal__close-button--second-line"></div>
+        </button>
+      </div>
+
+      <div class="modal__body-bottom">
+        <form class="modal__form">
+          <fieldset class="modal__form-inputs">
+            <legend class="modal__form__legend">Info about book</legend>
+            <input class="modal__form-input modal__form-input--bookTitle" type="text"
+              placeholder="Please, enter book name" aria-label="Choose book name">
+
+            <input class="modal__form-input modal__form-input--authorName" type="text"
+              placeholder="Please, enter author name" aria-label="Choose author name">
+
+            <input class="modal__form-input modal__form-input--rating" type="number" placeholder="Please, chose rating"
+              aria-label="Choose rating" min="1" max="5" step="1">
+          </fieldset>
+
+          <button class="modal__form-button button">Add a book</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <div class="flex-wrapper">
 
     <header class="header">
@@ -35,7 +64,7 @@
     <main class="main">
       <aside class="main__sidebar sidebar">
         <div class="sidebar__box">
-          <button class="sidebar__box-button button">Add a book</button>
+          <button class="sidebar__box-button button" data-open-modal>Add a book</button>
         </div>
 
         <div class="divider"></div>

@@ -3,8 +3,10 @@
 @import url('./vars.css');
 @import url(./scrollbarStyles.css);
 @import url('./baseSettings.css');
+@import url('./addBookButton.css');
 @import url('./rating.css');
 @import url(./book.css);
+@import url('./modal.css');
 
 .header,
 .footer {
