@@ -9,7 +9,7 @@ function VacuumCleaner(options) {
 VacuumCleaner.prototype = { ...ElectricalDevice.prototype };
 
 VacuumCleaner.prototype.changeCleaningMode = function changeCleaningMode() {
-  if (this.state === false) {
+  if (!this.state) {
     console.log('Device is not turned on!. Please, turn on the device.');
 
     return;
