@@ -1,6 +1,6 @@
 function ElectricalDevice(options) {
   this.power = options.power;
-  this.state = options.turnOnStatustate;
+  this.state = options.state;
 }
 
 ElectricalDevice.prototype.info = function info() {
