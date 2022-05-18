@@ -4,7 +4,7 @@ function ElectricalDevice(options) {
 }
 
 ElectricalDevice.prototype.info = function info() {
-  console.log(`Power: ${this.power}, cleaningMode: ${this.cleaningMode}`);
+  console.log(`Power: ${this.power}`);
 };
 
 ElectricalDevice.prototype.turnOn = function turnOn() {
