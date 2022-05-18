@@ -8,7 +8,7 @@ function VacuumCleaner(options) {
 
 VacuumCleaner.prototype = { ...ElectricalDevice.prototype };
 
-ElectricalDevice.prototype.changeCleaningMode = function changeCleaningMode() {
+VacuumCleaner.prototype.changeCleaningMode = function changeCleaningMode() {
   if (this.state === false) {
     console.log('Device is not turned on!. Please, turn on the device.');
 
@@ -26,6 +26,10 @@ ElectricalDevice.prototype.changeCleaningMode = function changeCleaningMode() {
   this.cleaningMode = 'wet';
 
   console.log('Cleaning mode is changed to wet!');
+};
+
+VacuumCleaner.prototype.info = function info() {
+  console.log(`Power: ${this.power}, cleaningMode: ${this.cleaningMode}`);
 };
 
 module.exports = VacuumCleaner;

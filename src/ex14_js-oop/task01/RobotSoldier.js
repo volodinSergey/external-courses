@@ -9,6 +9,10 @@ function RobotSoldier(options) {
 
 RobotSoldier.prototype = { ...ElectricalDevice.prototype };
 
+RobotSoldier.prototype.info = function info() {
+  console.log(`Power: ${this.power}, map is ${this.mapScanningStatus}, shooting status:${this.shootingStatus}`);
+};
+
 RobotSoldier.prototype.startShooting = function startShooting() {
   if (!this.state) {
     console.log('Device is not turned on!. Please, turn on the device.');
@@ -65,10 +69,6 @@ RobotSoldier.prototype.startMapScanning = function initMap() {
   this.mapScanningStatus = 'scanned';
 
   console.log('Map scanning is taken up.....');
-};
-
-RobotSoldier.prototype.info = function info() {
-  console.log(`Power: ${this.power}, map is ${this.mapScanningStatus}, shooting status:${this.shootingStatus}`);
 };
 
 module.exports = RobotSoldier;
