@@ -29,10 +29,6 @@ class ElectricDevice {
     console.log('Device is turned off');
   }
 
-  getModel() {
-    return this.model;
-  }
-
   getPower() {
     return this.power;
   }
@@ -128,18 +124,23 @@ class Room {
     console.log(`Total power is ${totalPower}`);
   }
 
-  findDevice(deviceName) {
-    return this.devices.forEach((device) => {
-      if (device.getModel().toLowerCase() === deviceName.toLowerCase()) {
-        console.log(`${deviceName} in ${this.roomName}`);
-      }
-    });
+  findDevice(deviceWeWannaFind) {
+    const findedDevice = this.devices.filter((deviceInRoom) => deviceInRoom.model.toLowerCase()
+      === deviceWeWannaFind.toLowerCase());
+
+    if (findedDevice.length === 0) {
+      console.log(`There is no ${deviceWeWannaFind} in the ${this.roomName}`);
+
+      return;
+    }
+
+    console.log(`${deviceWeWannaFind} in ${this.roomName}`);
   }
 }
 
-const samsungTv = new Televizor(1500, 'Samsung');
-const dysonVacuumCleaner = new VacuumCleaner(400, 'Dyson', 'wet');
-const livingRoom = new Room([samsungTv, dysonVacuumCleaner], 'kitchen');
+const samsungTv = new Televizor(1500, 'samsungTelevizor');
+const dysonVacuumCleaner = new VacuumCleaner(400, 'dysonVacuumCleaner', 'wet');
+const livingRoom = new Room([samsungTv, dysonVacuumCleaner], 'livingRoom');
 
 const coffeeMachine = new DrinkMakerMachine(500, 'Coffemachine', 'coffee arabica');
 const teaMachine = new DrinkMakerMachine(700, 'Teamachine', 'asian tea');
