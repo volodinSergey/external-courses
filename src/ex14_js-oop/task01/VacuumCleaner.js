@@ -6,7 +6,8 @@ function VacuumCleaner(options) {
   this.cleaningMode = options.cleaningMode;
 }
 
-VacuumCleaner.prototype = { ...ElectricalDevice.prototype };
+VacuumCleaner.prototype = Object.create(ElectricalDevice.prototype);
+VacuumCleaner.prototype.constructor = VacuumCleaner;
 
 VacuumCleaner.prototype.changeCleaningMode = function changeCleaningMode() {
   if (!this.state) {

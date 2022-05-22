@@ -7,7 +7,8 @@ function RobotSoldier(options) {
   this.mapScanningStatus = options.mapScanningStatus;
 }
 
-RobotSoldier.prototype = { ...ElectricalDevice.prototype };
+RobotSoldier.prototype = Object.create(ElectricalDevice.prototype);
+RobotSoldier.prototype.constructor = RobotSoldier;
 
 RobotSoldier.prototype.info = function info() {
   console.log(`Power: ${this.power}, map is ${this.mapScanningStatus}, shooting status:${this.shootingStatus}`);

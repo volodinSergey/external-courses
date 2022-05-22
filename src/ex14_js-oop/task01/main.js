@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const VacuumCleaner = require('./VacuumCleaner.js');
 const RobotCleaner = require('./RobotCleaner.js');
 const RobotSoldier = require('./RobotSoldier.js');
@@ -21,7 +22,3 @@ const robotSoldier = new RobotSoldier({
   mapScanningStatus: 'not scanned',
   shootingStatus: 'not shooting',
 });
-
-vacuumCleaner.turnOn();
-robotCleaner.turnOn();
-robotSoldier.turnOn();

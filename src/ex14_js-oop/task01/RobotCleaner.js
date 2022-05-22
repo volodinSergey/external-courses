@@ -6,7 +6,8 @@ function RobotCleaner(options) {
   this.mapScanningStatus = options.mapScanningStatus;
 }
 
-RobotCleaner.prototype = { ...VacuumCleaner.prototype };
+RobotCleaner.prototype = Object.create(VacuumCleaner.prototype);
+RobotCleaner.prototype.constructor = RobotCleaner;
 
 RobotCleaner.prototype.info = function info() {
   console.log(`Power: ${this.power}, cleaningMode: ${this.cleaningMode}, map is ${this.mapScanningStatus}`);

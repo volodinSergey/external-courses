@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 class ElectricDevice {
   constructor(power = 0, model = '') {
     this.power = power;
@@ -145,13 +146,3 @@ const livingRoom = new Room([samsungTv, dysonVacuumCleaner], 'livingRoom');
 const coffeeMachine = new DrinkMakerMachine(500, 'Coffemachine', 'coffee arabica');
 const teaMachine = new DrinkMakerMachine(700, 'Teamachine', 'asian tea');
 const kitchen = new Room([teaMachine, coffeeMachine], 'kitchen');
-
-teaMachine.turnOn();
-coffeeMachine.turnOn();
-kitchen.calculatePower();
-kitchen.findDevice('teaMachine');
-
-dysonVacuumCleaner.turnOn();
-samsungTv.turnOn();
-livingRoom.calculatePower();
-livingRoom.findDevice('dysonVacuumCleaner');
