@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.debounced-box__label,
+.regular-box__label {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.input {
+    padding: 3px;
+}
+
+.input:focus {
+    outline: 2px solid blueviolet;
+}
+
+.regular-box__output,
+.debounced-box__output {
+    font-weight: 600;
+}
+
+.debounced-box__output {
+    transform: translateX(130px);
+}
+
+.regular-box__output {
+    transform: translateX(90px);
+}
